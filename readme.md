@@ -4,6 +4,7 @@
 `mvn archetype:generate -DarchetypeGroupId=org.apache.flink -DarchetypeArtifactId=flink-quickstart-java -DarchetypeVersion=1.7.0`
 * 下载项目依赖 `mvn dependency:copy-dependencies` 
 * 下载项目依赖的源码 `mvn dependency:sources`
+* 下载项目依赖的JavaDoc `mvn dependency:resolve -Dclassifier=javadoc`
 * 如果VScode 中出现 starting java  language server xx% ,到下面目录 `%appdata%\Code\User\workspaceStorage` 删除重新打开该项目
 * [Getting Started With Batch Processing Using Apache Flink](https://cloud.tencent.com/developer/article/1133274)
 * [Getting Started With Batch Processing Using Apache Flink](https://dzone.com/articles/getting-started-with-batch-processing-using-apache)
