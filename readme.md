@@ -36,3 +36,7 @@
 > Machine Learning for Flink
 > FlinkML is the Machine Learning (ML) library for Flink. It is a new effort in the Flink community, with a growing list of algorithms and contributors. With FlinkML we aim to provide scalable ML algorithms, an intuitive API, and tools that help minimize glue code in end-to-end ML systems. You can see more details about our goals and where the library is headed in our vision and roadmap here.
 
+## Dependency Reduced Pom 的解释
+The shade:shade Mojo is quite well documented, here especially about the createDependencyReducedPom parameter, which will create that dependency-reduced-pom.xml file: maven-shade-plugin/shade-mojo.html#createDependencyReducedPom
+
+In short, this is quite useful if you intend to use that shaded JAR (instead of the normal JAR) as a dependency for another module. That dependency-reduced-pom.xml will not contain the JARs already present in the shaded one, avoiding useless duplication.
