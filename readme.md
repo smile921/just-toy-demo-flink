@@ -8,3 +8,31 @@
 * 如果VScode 中出现 starting java  language server xx% ,到下面目录 `%appdata%\Code\User\workspaceStorage` 删除重新打开该项目
 * [Getting Started With Batch Processing Using Apache Flink](https://cloud.tencent.com/developer/article/1133274)
 * [Getting Started With Batch Processing Using Apache Flink](https://dzone.com/articles/getting-started-with-batch-processing-using-apache)
+
+## Flink Libraries
+* Event Processing (CEP)
+> FlinkCEP is the Complex Event Processing (CEP) library implemented on top of Flink. It allows you to detect event patterns in an endless stream of events, giving you the opportunity to get hold of what’s important in your data.
+
+```xml
+<dependency>
+  <groupId>org.apache.flink</groupId>
+  <artifactId>flink-cep_2.11</artifactId>
+  <version>1.8-SNAPSHOT</version>
+</dependency>
+```
+* Storm Compatibility 
+> Storm Compatibility Beta Flink streaming is compatible with Apache Storm interfaces and therefore allows reusing code that was implemented for Storm.
+>
+> You can:
+> 
+> execute a whole Storm Topology in Flink.
+> use Storm Spout/Bolt as source/operator in Flink streaming programs.
+
+* Graphs: Gelly
+> Gelly: Flink Graph API
+> Gelly is a Graph API for Flink. It contains a set of methods and utilities which aim to simplify the development of graph analysis applications in Flink. In Gelly, graphs can be transformed and modified using high-level functions similar to the ones provided by the batch processing API. Gelly provides methods to create, transform and modify graphs, as well as a library of graph algorithms.
+
+* FlinkML 
+> Machine Learning for Flink
+> FlinkML is the Machine Learning (ML) library for Flink. It is a new effort in the Flink community, with a growing list of algorithms and contributors. With FlinkML we aim to provide scalable ML algorithms, an intuitive API, and tools that help minimize glue code in end-to-end ML systems. You can see more details about our goals and where the library is headed in our vision and roadmap here.
+

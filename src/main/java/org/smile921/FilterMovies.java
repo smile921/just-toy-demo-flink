@@ -81,7 +81,8 @@ public class FilterMovies {
 	
 	public static void loadMovieData(ExecutionEnvironment env) throws Exception {
 		// Load dataset of movies
-		DataSet<Tuple3<Long, String, String>> lines = env.readCsvFile("file:///C:/Dev/just-toy-demo-flink/src/main/resources/csv/movies.csv").ignoreFirstLine()
+		// file:///C:/Dev/just-toy-demo-flink/src/main/resources/csv
+		DataSet<Tuple3<Long, String, String>> lines = env.readCsvFile("./src/main/resources/csv/movies.csv").ignoreFirstLine()
 				.parseQuotedStrings('"').ignoreInvalidLines().types(Long.class, String.class, String.class);
 
 		DataSet<Movie> movies = lines.map(new MapFunction<Tuple3<Long, String, String>, Movie>() {
@@ -106,8 +107,9 @@ public class FilterMovies {
 			}
 		});
 
-		filteredMovies.writeAsText("output1.txt");
-		filteredMovies.print();
+		// write project root folder
+		filteredMovies.writeAsText("output2.txt");
+		filteredMovies.print();// call the model toString 方法
 	}
 	/*************************************************/
 	/******************************************************************
